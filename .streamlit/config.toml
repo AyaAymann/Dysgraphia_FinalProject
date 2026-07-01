@@ -1,0 +1,15 @@
+[theme]
+# Deep Purple for buttons and primary accents
+primaryColor = "#6A1B9A"
+
+# A beautiful, soft lavender/purple for the main background (No longer white!)
+backgroundColor = "#E6D7FF" 
+
+# A slightly deeper purple for the upload box and menus to create contrast
+secondaryBackgroundColor = "#D3BBFF"
+
+# Dark gray/black for high-contrast, readable text
+textColor = "#1A202C"
+
+# Clean, modern font
+font = "sans serif"
