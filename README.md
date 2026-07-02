@@ -1,5 +1,5 @@
+##Dysgraphia Text Translator
 <img width="1918" height="620" alt="Screenshot 2026-07-01 192226" src="https://github.com/user-attachments/assets/49a8cae0-3935-43cf-9de6-79e61e990fb5" />
-Dysgraphia Text Translator
 
 A Streamlit web application that detects dysgraphic handwriting, extracts the handwritten text using OCR, and translates it into clear English using Google's Gemini AI.
 
