@@ -27,8 +27,8 @@ A Streamlit web application that detects dysgraphic handwriting and converts it 
 Clone the repository:
 
 ```bash
-git clone https://github.com/AyaAymann/Dysgraphia_FinalProject.git
-cd Dysgraphia_FinalProject
+git clone https://github.com/AyaAymann/Dysgraphia_Text_Translator.git
+cd Dysgraphia_Text_Translator
 ```
 
 Install the required libraries:
