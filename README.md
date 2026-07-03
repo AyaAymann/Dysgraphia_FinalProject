@@ -1,62 +1,47 @@
 ## Dysgraphia Text Translator
 <img width="1918" height="620" alt="Screenshot 2026-07-01 192226" src="https://github.com/user-attachments/assets/49a8cae0-3935-43cf-9de6-79e61e990fb5" />
 
-A Streamlit web application that detects dysgraphic handwriting, extracts the handwritten text using OCR, and translates it into clear English using Google's Gemini AI.
+A Streamlit web application that detects dysgraphic handwriting and converts it into clear, readable English using AI.
 
 ## Features
 
-- Detects handwriting regions using YOLO
-- Extracts text with EasyOCR
-- Identifies normal and dysgraphic handwriting
-- Reconstructs dysgraphic text using Gemini AI
-- User-friendly Streamlit interface
+- Detects dysgraphic handwriting from uploaded images.
+- Extracts handwritten text using EasyOCR.
+- Classifies handwriting as **Normal** or **Dysgraphic**.
+- Reconstructs dysgraphic text into grammatically correct English using Google Gemini.
+- Displays the original OCR output alongside the corrected text.
+- Simple and responsive Streamlit interface.
 
 ## Technologies Used
 
 - Python
 - Streamlit
-- YOLO (Ultralytics)
 - EasyOCR
 - Google Gemini API
 - OpenCV
+- Pillow (PIL)
 - NumPy
-- Pillow
-
-## Project Workflow
-
-1. Upload a handwriting image.
-2. YOLO detects handwriting regions.
-3. EasyOCR extracts the text.
-4. The system determines whether the handwriting is normal or dysgraphic.
-5. Gemini AI reconstructs dysgraphic text into readable English.
-6. The translated result is displayed in the web interface.
 
 ## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/AyaAymann/Dysgraphia_FinalProject.git
-cd Dysgraphia_FinalProject
+git clone https://github.com/jonsafwat/Dysgraphia-text-translator.git
+cd Dysgraphia-text-translator
 ```
 
-Install the required packages:
+Install the required libraries:
 
 ```bash
-pip install streamlit ultralytics easyocr google-generativeai opencv-python numpy pillow
+pip install streamlit easyocr google-generativeai opencv-python pillow numpy
 ```
 
-## Required Files
+## Configuration
 
-Place the trained YOLO model in the project directory:
+Create a `.streamlit/secrets.toml` file and add your Gemini API key:
 
-```
-YOLO.keras
-```
-
-Add your Gemini API key to Streamlit Secrets:
-
-```
+```toml
 GEMINI_API_KEY = "YOUR_API_KEY"
 ```
 
@@ -66,20 +51,23 @@ GEMINI_API_KEY = "YOUR_API_KEY"
 streamlit run app.py
 ```
 
+## How It Works
+
+1. Upload an image containing handwritten or printed text.
+2. EasyOCR extracts the text from the image.
+3. Gemini analyzes the handwriting to determine whether dysgraphia is present.
+4. If dysgraphia is detected, the text is reconstructed into clear, grammatically correct English.
+5. The application displays the detection result and the translated text.
+
 ## Project Structure
 
 ```
 ├── app.py
-├── YOLO.keras
+├── .streamlit/
+│   ├── secrets.toml
+│   └── config.toml
 └── README.md
 ```
-
-## Future Improvements
-
-- Support multiple languages
-- Improve OCR accuracy
-- Add confidence scores
-- Deploy as a public web application
 
 ## License
 
